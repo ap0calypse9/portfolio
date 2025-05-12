@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import './Terminal.css';
 
 export default function Terminal() {
-  const [logs, setLogs] = useState(["Welcome to the terminal. Type `help` to begin."]);
+  const [logs, setLogs] = useState([
+    "Welcome to the terminal. Type `help` to begin.",
+  ]);
   const [input, setInput] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
@@ -17,7 +19,8 @@ export default function Terminal() {
     let response;
     switch (cmd.toLowerCase()) {
       case "whoami":
-        response = "I'm Anirban 21 y/o CSE pre-final year student — I make and break stuff and repeat....Probably pushing to main when I shouldn’t.At the end of the day, I’m just a student.... in code and in life. // TODO: fix later hehe";
+        response =
+          "I'm Anirban 21 y/o CSE pre-final year student — I make and break stuff and repeat....Probably pushing to main when I shouldn’t.At the end of the day, I’m just a student.... in code and in life. // TODO: fix later hehe";
         break;
       case "projects":
         response = "🔥 Chaos File | 🛠️ Fix & Break | ✍️ Console Output";
@@ -26,18 +29,25 @@ export default function Terminal() {
         response = "Visit /blog to read my latest thoughts.";
         break;
       case "help":
-        response = "Available commands: whoami, projects, blog, clear, get-resume, help";
+        response =
+          "Available commands: whoami, projects, blog, clear, get-resume, help";
         break;
       case "clear":
         setLogs([]);
-        return; // Don't append anything when clearing the terminal
+        return;
       case "get-resume":
         response = (
-          <>
-            <span>
-              You can download my resume <a href="/ANI-RESUME.pdf" download>here</a>.
-            </span>
-          </>
+          <span>
+            📥 You can download my resume{" "}
+            <a
+              href="/ANI-RESUME.pdf"
+              download
+              style={{ color: "#00ffff", textDecoration: "underline" }}
+            >
+              here
+            </a>
+            .
+          </span>
         );
         break;
       default:
@@ -63,7 +73,9 @@ export default function Terminal() {
       </div>
       <div className="terminal-output">
         {logs.map((log, idx) => (
-          <div key={idx} className="terminal-log">{log}</div>
+          <div key={idx} className="terminal-log">
+            {typeof log === "string" ? log : log}
+          </div>
         ))}
         <div className="command-line">
           <span className="prompt">$</span>{" "}
