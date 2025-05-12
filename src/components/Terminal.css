@@ -1,0 +1,102 @@
+
+.terminal-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  max-height: 60vh;
+  background: linear-gradient(135deg, rgba(34, 34, 34, 0.9), rgba(0, 0, 0, 0.9));
+  color: #f5f5dc;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 76, 76, 0.3);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: #ff4c4c;
+}
+
+.terminal-icon {
+  margin-right: 8px;
+}
+
+.terminal-output {
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.terminal-log {
+  margin-bottom: 4px;
+}
+
+.command-line {
+  display: flex;
+  align-items: baseline;
+}
+
+.prompt {
+  color: #ff4c4c;
+}
+
+.command {
+  color: #f5f5dc;
+}
+
+.cursor {
+  color: #ff4c4c;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-input {
+  margin-top: 10px;
+}
+
+.terminal-input input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ff4c4c;
+  color: #f5f5dc;
+  width: 85%;
+  outline: none;
+  font-size: 14px;
+}
+
+.terminal-input input:focus {
+  border-bottom: 2px solid #ff4c4c;
+}
+
+
+@media (max-width: 600px) {
+  .terminal-container {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    max-height: 50vh;
+    box-shadow: 0 -4px 10px rgba(255, 76, 76, 0.2);
+  }
+
+  .terminal-input input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .terminal-output {
+    font-size: 15px;
+  }
+}

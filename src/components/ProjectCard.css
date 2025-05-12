@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+.project-wrapper {
+  background-color: #061a30; /* Light slate gray vibe */
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+.projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 ;
+}
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.projects-title {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ff6f3c;
+  letter-spacing: 1px;
+  border-bottom: 2px dashed #ccc;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted for more fluid resizing */
+  gap: 30px; /* Adjustable gap between cards */
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card {
+  background-color: #363652;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  width: 100%; /* Ensure the card takes up full width in grid cell */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #bebeb8;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.3rem;
+  color: #d1d1c9;
+  margin-bottom: 20px;
+}
+
+.project-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #69758d;
+  border-bottom: 1px dashed #4c8bf5;
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #1a6ce3;
+  border-bottom: 1px solid #1a6ce3;
+}
+
+.project-tags {
+  margin-top: 15px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e5ecf5;
+  color: #65697c;
+  padding: 5px 10px;
+  margin-right: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .projects-title {
+    font-size: 2.5rem; /* Slightly smaller title on mobile */
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller card size for mobile */
+    gap: 20px; /* Reduced gap for mobile */
+  }
+
+  .project-card {
+    padding: 15px; /* Less padding inside cards for mobile */
+  }
+
+  .project-card h2 {
+    font-size: 1.8rem; /* Adjusted title size */
+  }
+
+  .project-card p {
+    font-size: 1.1rem; /* Adjusted description font size */
+  }
+}
+
+/* Very small mobile devices */
+@media screen and (max-width: 480px) {
+  .projects-title {
+    font-size: 2rem; /* Title even smaller on very small screens */
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack cards on very small screens */
+    gap: 15px; /* Even smaller gap */
+  }
+
+  .project-card {
+    padding: 10px; /* Minimal padding for smaller screens */
+  }
+
+  .project-card h2 {
+    font-size: 1.5rem; /* Adjusted title size */
+  }
+
+  .project-card p {
+    font-size: 1rem; /* Adjusted description font size */
+  }
+}

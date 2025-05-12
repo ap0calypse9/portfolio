@@ -1,0 +1,33 @@
+/* src/components/BackgroundQuotes.css */
+.background-quotes-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.quote-line {
+  position: absolute;
+  font-family: monospace;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.56);
+  max-width: 250px;
+  white-space: nowrap;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive font size scaling */
+@media (max-width: 768px) {
+  .quote-line {
+    font-size: 12px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-line {
+    font-size: 11px;
+    max-width: 180px;
+  }
+}
