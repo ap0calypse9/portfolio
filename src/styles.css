@@ -304,7 +304,7 @@ body {
 /* Read More Button Styling */
 .read-more-btn {
   padding: 10px 20px;
-  background-color: #5BFFB9; /* Teal color */
+  background-color: #d64848; /* Teal color */
   color: #202124; /* Dark background for the button */
   font-size: 1rem;
   text-align: center;
@@ -315,7 +315,7 @@ body {
 }
 
 .read-more-btn:hover {
-  background-color: #4AC79C; /* Darker teal on hover */
+  background-color: #FF4C4C; /* Darker teal on hover */
 }
 
 /* Single Blog Post Page */
