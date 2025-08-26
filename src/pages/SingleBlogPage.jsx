@@ -26,19 +26,21 @@ export default function SingleBlogPage() {
   if (!post) return <div>Loading...</div>;
 
   return (
+  <div className="single-post-wrapper">
     <div className="single-post-container">
-      <h1>{post.title}</h1>
       <Helmet><title>Blogs | ap0calypse</title></Helmet>
+      <h1>{post.title}</h1>
       <p className="date">{new Date(post.date).toLocaleDateString()}</p>
       <PortableText value={post.content} />
       {post.mainImage && (
-  <img
-    src={urlFor(post.mainImage).width(800).url()}
-    alt={post.title}
-    className="blog-post-image"
-  />
-)}
-
+        <img
+          src={urlFor(post.mainImage).width(800).url()}
+          alt={post.title}
+          className="blog-post-image"
+        />
+      )}
     </div>
-  );
+  </div>
+);
+
 }

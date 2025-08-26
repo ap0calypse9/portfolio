@@ -318,10 +318,20 @@ body {
   background-color: #FF4C4C; /* Darker teal on hover */
 }
 
+
+.single-post-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0f0f0f; /* match site bg */
+  padding: 40px 20px;
+}
 /* Single Blog Post Page */
 .single-post-container {
-  max-width: 750px;
-  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  /*margin: 0 auto;*/
   background-color: #2e2a2a; /* Light background color similar to ChatGPT theme */
   padding: 40px;
   border-radius: 12px;
