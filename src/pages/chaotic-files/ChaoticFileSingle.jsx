@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getChaoticFileById } from "../../api/getChaoticFiles";
 import { Helmet } from "react-helmet";
 import { PortableText } from "@portabletext/react";
+import "./ChaoticFileSingle.css";
 
 export default function ChaoticFileSingle() {
   const { id } = useParams();
