@@ -1,0 +1,48 @@
+/* ChaoticList.css */
+
+.chaotic-list {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: monospace; /* dev vibe */
+}
+
+.chaotic-item {
+  border-bottom: 1px solid #444;
+  padding: 1rem 0;
+}
+
+.chaotic-item:last-child {
+  border-bottom: none;
+}
+
+.chaotic-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #eee;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.chaotic-title {
+  color: rgb(15, 146, 0); /* subtle highlight */
+}
+
+.chaotic-excerpt {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.read-more {
+  font-size: 0.9rem;
+  color: rgb(195, 50, 14);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}

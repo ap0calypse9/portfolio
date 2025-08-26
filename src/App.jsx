@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import BlogPage from './pages/BlogPage';
 import ChaoticFilePage from './pages/ChaoticFilePage';
+import ChaoticFileSingle from "./pages/chaotic-files/ChaoticFileSingle";
 import SingleBlogPage from "./pages/SingleBlogPage";
 import Projects from './pages/ProjectsPage';
 
@@ -11,6 +12,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/chaotic" element={<ChaoticFilePage />} />
+      <Route path="/chaotic-files/:id" element={<ChaoticFileSingle />} />
       <Route path="/blog/:id" element={<SingleBlogPage />} />
       <Route path="/projects" element={<Projects />} />
 
